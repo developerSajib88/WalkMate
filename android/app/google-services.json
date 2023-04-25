@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "421115903220",
+    "project_id": "walkmate-2d0b4",
+    "storage_bucket": "walkmate-2d0b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421115903220:android:41e8782d01e0607f1c72a1",
+        "android_client_info": {
+          "package_name": "com.smarter.walkmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421115903220-6am1qsiq1fu17vqkppv8f98bf6ld8lbq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smarter.walkmate",
+            "certificate_hash": "1c20904205a1a0595f7d6c409ddf9659cae76401"
+          }
+        },
+        {
+          "client_id": "421115903220-cdijqj1bvj0amne2lr16sscugrvrp5h6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvQ8BXq_wU35Tbth5z6zUoDEF0WHxaCNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421115903220-cdijqj1bvj0amne2lr16sscugrvrp5h6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
