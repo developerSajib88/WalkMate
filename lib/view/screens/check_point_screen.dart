@@ -146,14 +146,20 @@ class _CheckPointScreenState extends State<CheckPointScreen> {
                                 builder: (_) {
                                   return Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
                                     InputText(text: AppConstants.COMPLETED, color: AppColor.light),
+
+                                    ///How much Completed view text
                                     Row(
                                       children: [
                                         HeaderText(text: checkPointController.completedTarget.toInt().toString(), color: AppColor.light),
                                         Text("m",style: GoogleFonts.manrope(color: AppColor.light,fontSize: 24,fontWeight: FontWeight.bold),)
                                       ],
                                     ),
+
                                     const SizedBox(height: 50,),
+
                                     InputText(text: AppConstants.TARGET, color: AppColor.light),
+
+                                    ///Total Target view text
                                     Row(
                                       children: [
                                         HeaderText(text: targetLimitController.targetLimit.toInt().toString(), color: AppColor.greyLight),
@@ -192,12 +198,14 @@ class _CheckPointScreenState extends State<CheckPointScreen> {
 
                       const Divider(color: AppColor.greyLight,),
 
+                      ///Check Point List
                       const Expanded(
                           child: CheckPointList(),
                       ),
 
                       const SizedBox(height: 10,),
 
+                      ///Add check point button
                       CustomButton(
                         onPressed: ()=> addCheckPoint(),
                         backgroundColor: AppColor.green,
@@ -206,6 +214,7 @@ class _CheckPointScreenState extends State<CheckPointScreen> {
 
                       const SizedBox(height: 15,),
 
+                      ///Mark as Completed Button
                       CustomButton(
                         onPressed: ()=>markAsCompletedButtonController(),
                         backgroundColor: themeModeController.darkTheme ==false? AppColor.light: AppColor.dark,

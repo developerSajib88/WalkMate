@@ -36,6 +36,8 @@ class _NotCompletedState extends State<NotCompleted> {
               child: SafeArea(
                 child: Container(width: double.infinity,height: double.infinity, padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 15),
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
+
+                    ///Logo with theme changing Button
                     Row(children: [
                       LogoWidget( color: AppColor.green),
                       const Spacer(),
@@ -48,6 +50,7 @@ class _NotCompletedState extends State<NotCompleted> {
 
                     const SizedBox(height: 30,),
 
+                    ///Title in APPLAUSE
                     HeaderText(
                       text: AppConstants.APPLAUSE,
                       color: AppColor.green,
@@ -55,9 +58,13 @@ class _NotCompletedState extends State<NotCompleted> {
 
                     const SizedBox(height: 30,),
 
+                    ///Details Text
                     const DescriptionWidget(),
 
                     const Spacer(),
+
+
+                    ///Home Button
                     CustomButton(
                       onPressed: ()=>Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context)=>const TargetScreen())),
                       backgroundColor: AppColor.green,

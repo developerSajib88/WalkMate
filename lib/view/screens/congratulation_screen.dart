@@ -24,14 +24,10 @@ class CongratulationScreen extends StatefulWidget {
 
 class _CongratulationScreenState extends State<CongratulationScreen> {
 
+  ///GetX controller dependencies Injection
   ThemeModeController themeModeController = Get.put(ThemeModeController());
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
 
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +39,8 @@ class _CongratulationScreenState extends State<CongratulationScreen> {
               child: SafeArea(
                 child: Container(width: double.infinity,height: double.infinity, padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 15),
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
+
+                    ///Logo with Theme changing Button
                     Row(children: [
                       LogoWidget( color: AppColor.green),
                       const Spacer(),
@@ -51,10 +49,12 @@ class _CongratulationScreenState extends State<CongratulationScreen> {
 
                     const SizedBox(height: 30,),
 
+                    ///Congratulation Images
                     const CongratsWidgets(),
 
                     const SizedBox(height: 30,),
 
+                    ///Congratulation Text
                     HeaderText(
                       text: AppConstants.CONGRATULATION,
                       color: AppColor.green,
@@ -62,9 +62,12 @@ class _CongratulationScreenState extends State<CongratulationScreen> {
 
                     const SizedBox(height: 30,),
 
+                    ///Details Text In congratulation Screen
                     const DescriptionWidget(),
 
                     const Spacer(),
+
+                    ///Home Button
                     CustomButton(
                       onPressed: ()=>Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context)=>const TargetScreen())),
                       backgroundColor: AppColor.green,

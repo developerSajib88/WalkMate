@@ -17,6 +17,9 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    ///Re-Usable custom button
+    ///Which we are using every where
     return SizedBox(width: double.infinity,height: 56.0,
       child: ElevatedButton(
           onPressed: onPressed,

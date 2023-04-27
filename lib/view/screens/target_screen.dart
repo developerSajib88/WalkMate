@@ -27,6 +27,7 @@ class TargetScreen extends StatefulWidget {
 
 class _TargetScreenState extends State<TargetScreen> {
 
+  ///GetX controlling dependency Injection
   ThemeModeController themeModeController = Get.put(ThemeModeController());
   TargetLimitController targetLimitController = Get.put(TargetLimitController());
 
@@ -35,6 +36,7 @@ class _TargetScreenState extends State<TargetScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    ///Set target limit from previous set limit
     targetLimitController.updateTarget();
   }
 
@@ -52,12 +54,15 @@ class _TargetScreenState extends State<TargetScreen> {
               child: Stack(
                 children: [
 
+                  ///Pattern widget
                   Positioned(top: 0,right: 0,
                       child: Center(child: Image.asset(Images.pattern,width: 200,height: 200,fit: BoxFit.cover,))
                   ),
 
                   SafeArea(
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+
+                      ///Logo with theme mode controller button
                       Row(children: [
                         LogoWidget( color: AppColor.light),
                         const Spacer(),
@@ -66,10 +71,12 @@ class _TargetScreenState extends State<TargetScreen> {
 
                       const SizedBox(height: 30,),
 
+                      ///Target Screen title text
                       HeaderText(text: AppConstants.GOAL_NOW, color: AppColor.light),
 
                       const SizedBox(height: 30,),
 
+                      ///Target screen description text
                       SizedBox(width: 300,
                           child: Text(
                             AppConstants.DETERMINATION,
@@ -105,6 +112,8 @@ class _TargetScreenState extends State<TargetScreen> {
 
                         const Spacer(),
 
+                        ///Custom seekbar/slider
+                        ///Which we are using for set target limit
                         const CustomSlider(
                           assetImage: Images.sliderIc,
                           inActiveTrackColor: AppColor.greyLight,
@@ -145,6 +154,7 @@ class _TargetScreenState extends State<TargetScreen> {
                     child: Column(children: [
                       GetBuilder<TargetLimitController>(
                         builder: (_) {
+                          ///Set Limit Button
                           return CustomButton(
                             onPressed: (){
                               if(targetLimitController.targetLimit >= 1000)Navigator.push(context, CupertinoPageRoute(builder: (context)=>const CheckPointScreen()));
@@ -157,6 +167,7 @@ class _TargetScreenState extends State<TargetScreen> {
 
                       const SizedBox(height: 15,),
 
+                      ///History Button
                       CustomButton(
                         onPressed: ()=>Navigator.push(context, CupertinoPageRoute(builder: (context)=>const HistoryScreen())),
                         backgroundColor: themeModeController.darkTheme ==false? AppColor.light: AppColor.dark,

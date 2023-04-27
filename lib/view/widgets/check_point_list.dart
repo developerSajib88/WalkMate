@@ -15,6 +15,7 @@ class CheckPointList extends StatefulWidget {
 
 class _CheckPointListState extends State<CheckPointList> {
 
+  ///GetX dependency injection
   ThemeModeController themeModeController = Get.put(ThemeModeController());
   CheckPointController checkPointController = Get.put(CheckPointController());
 
@@ -22,6 +23,8 @@ class _CheckPointListState extends State<CheckPointList> {
   Widget build(BuildContext context) {
     return GetBuilder<CheckPointController>(
       builder: (_) {
+        ///Check Point List Builder
+        ///Stream Type Builder
         return ListView.builder(
             itemCount: checkPointController.checkPointLiST.length,
             padding: EdgeInsets.zero,

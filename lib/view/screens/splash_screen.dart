@@ -22,6 +22,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
+  ///GetX theme mode controller dependencies Injection
   ThemeModeController themeModeController = Get.put(ThemeModeController());
 
 
@@ -29,6 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    ///Initialize previous theme mode from taking local database
     themeModeController.previousThemeMode();
   }
 
